@@ -1,0 +1,49 @@
+<div class="container">
+    <ng-container *ngIf="listTrainings">
+        <table class="table table-strped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th> <th>NOM</th> <th>DESCRIPTION</th> <th>PRIX</th> <th>QUANTITE</th> <th>PANIER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let training of listTrainings">
+                    <td>{{training.id}}</td>
+                    <td>{{training.name}}</td>
+                    <td>{{training.description}}</td>
+                    <td>{{training.price}}</td>
+                    <td> <input type="number" name="quantity" style="width: 60px" [(ngModel)]="training.quantity"></td>
+                    <td> <a class="btn btn-primary" (click)="onAddToCart(training)"> Ajouter </a></td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+
+    <div class="col-md-3">
+        <form #f="ngForm" (ngSubmit)="onSaveCustomer(f.value)">
+        <div class="form-group">
+            <label class="control-label">Nom : </label>
+            <input type="text" name="name" required class="form-control" [(ngModel)]="cartService.getCustomer().name">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Prénom : </label>
+            <input type="text" name="firstName" required class="form-control" [(ngModel)]="cartService.getCustomer().firstName">
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Adresse : </label>
+            <input type="text" name="address" required class="form-control" [(ngModel)]="cartService.getCustomer().address">
+       
+            <div class="form-group">
+                <label class="control-label">Tel : </label>
+                <input type="text" name="phone" required class="form-control" [(ngModel)]="cartService.getCustomer().phone">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Email : </label>
+                <input type="text" name="email" required class="form-control" [(ngModel)]="cartService.getCustomer().email">
+            </div>
+            <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Next</button>
+        </div>
+        </form>
+    </div>
+</div>
