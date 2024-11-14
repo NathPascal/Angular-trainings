@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Customer } from 'src/app/model/customer.model';
+import { CartService } from 'src/app/services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public cartService : CartService) { }
 
   ngOnInit(): void {
   }
 
+  onSaveCustomer (customer: Customer){
+    //this.cartService.setCustomer(customer); 
+    console.log(customer);
+  }
 }

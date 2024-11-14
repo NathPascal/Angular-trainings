@@ -1,1 +1,36 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><strong>ID</strong></th> 
+                <th><strong>NOM</strong></th> 
+                <th><strong>QUANTITE</strong></th> 
+                <th><strong>PRIX</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let training of cartItems">
+                <tr>
+                    <td>{{ training.id }}</td>
+                    <td>{{ training.name }}</td>
+                    <td>{{ training.quantity}}</td>
+                    <td>{{ training.price}}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="removeFromCart(training)">Supprimer</button>
+                    </td>
+                </tr>
+                     
+            </ng-container> 
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td>{{ total }}</td>
+                <td></td>
+              </tr>
+        </tbody>
+    </table>
+          
+    <button class="btn btn-success mt-3" (click)="placeOrder()">Commander</button>
+    
+</div>
