@@ -16,7 +16,6 @@ export class CustomerComponent implements OnInit {
   }
 
   onSaveCustomer (customer: Customer){
-    //this.cartService.setCustomer(customer); 
     console.log(customer);
   }
 }

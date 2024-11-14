@@ -34,8 +34,4 @@ export class CartService {
     return this.customer;
   }
 
-  //setCustomer(customerData: { name: string; firstName: string; address: string; phone: string; email: string }) {
-    //this.customer = customerData;
-  //}
-
 }
