@@ -25,7 +25,7 @@ export class CartService {
     this.saveCart(); // sauvegarde dans local storage
   }
 
-  // Methode tous les éléments dans le panier
+  // Methode retourne la liste de tous les éléments stockés dans le panier
   getCartItems(): Training[] {
     return this.cart;
   }
@@ -41,7 +41,7 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
-  // initialise panier dans local storage
+  // initialise panier dans local storage pour récupérer les données
   private storageCart(): void {
     const cartData = localStorage.getItem('cart');
     if (cartData) {
@@ -54,8 +54,8 @@ export class CartService {
     return this.customer;
   }
 
-  getOrder() {
-    console.log('ok');
-  }
+  //getOrder() {
+   // console.log('ok');
+  //}
 
 }
