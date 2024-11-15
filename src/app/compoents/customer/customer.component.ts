@@ -10,12 +10,16 @@ import { Router } from '@angular/router';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor(public cartService : CartService) { }
+  constructor(public cartService : CartService, private router : Router) { }
 
   ngOnInit(): void {
   }
 
   onSaveCustomer (customer: Customer){
     console.log(customer);
+  }
+
+  summaryCart(): void{
+    this.router.navigateByUrl ('order');
   }
 }

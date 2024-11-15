@@ -4,6 +4,8 @@ import { Training } from '../model/training.model';
 
 import { CustomerComponent } from '../compoents/customer/customer.component';
 
+import { OrderComponent } from '../compents/order/order.component';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +16,7 @@ export class CartService {
 
   constructor() { 
     this.storageCart(); // initialisation 
-
+  
   }
 
   // Methode pour ajouter les éléments dans le panier
@@ -44,11 +46,16 @@ export class CartService {
     const cartData = localStorage.getItem('cart');
     if (cartData) {
       this.cart = JSON.parse(cartData);
-    }
+    } 
+    //else {return null;} si on remplace void par any
   }
 
   getCustomer() {
     return this.customer;
+  }
+
+  getOrder() {
+    console.log('ok');
   }
 
 }

@@ -21,7 +21,7 @@
             <label class="control-label">Email : </label>
             <input type="text" name="email" required class="form-control" [(ngModel)]="cartService.getCustomer().email">
         </div>
-        <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Next</button>
+        <button class="btn btn-primary" (click)="summaryCart()">Next</button>
     </div>
     </form>
 </div>
