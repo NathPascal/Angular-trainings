@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-
-  constructor(public cartService : CartService, private router : Router) { }
+ 
+  constructor(public cartService : CartService, private router : Router) {}
 
   ngOnInit(): void {
   }

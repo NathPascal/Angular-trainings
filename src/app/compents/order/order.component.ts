@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 
 
@@ -13,8 +14,12 @@ export class OrderComponent implements OnInit {
   orderNumber: string = '123456'; 
   orderDate: string = new Date().toLocaleDateString();
   total: number = 0;
+  showModal = false;
+  modalTitle = 'Commande confirmée';
+  modalContent = 'Votre commande a bien été prise en compte, merci de nous avoir donné : ';
+  modalData: any;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router : Router) { }
 
   ngOnInit(): void {
     this.customer = this.cartService.getCustomer(); 
@@ -26,12 +31,25 @@ export class OrderComponent implements OnInit {
     this.total = this.cartItems.reduce((sum, training) => sum + (training.price*training.quantity), 0);
   }
 
+  onOrder(){
+    this.modalData = this.cartService.getAmount();
+    this.showModal = true;
+  }
+
+  onModalClose(): void{
+    this.showModal = false;
+    this.cartService.clear();
+    this.router.navigateByUrl('');
+    console.log("Back to the future !");
+  }
+
   confirmOrder() {
-    const confirmation = confirm("Votre commande a été validée !");
-    if (confirmation) {
-        console.log("Commande confirmée !");
-    } else {
-        console.log("Commande non confirmée.");
-    }
-}
+    this.showModal = true;
+    //const confirmation = confirm("Votre commande a été validée !");
+    //if (confirmation) {
+       // console.log("Commande confirmée !");
+   // } else {
+        //console.log("Commande non confirmée.");
+    //}
+  }
 }

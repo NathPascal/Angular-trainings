@@ -1,0 +1,65 @@
+{
+  "trainings": [
+    {
+      "id": 1,
+      "name": "HTML/CSS",
+      "description": "Formation HTML/CSS 2 jours",
+      "price": 800,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Javascript",
+      "description": "Formation JavaScript 4 jours",
+      "price": 1000,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Python",
+      "description": "Formation Python/Django 10 jours",
+      "price": 2000,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "Angular",
+      "description": "Formation Angular 5 jours",
+      "price": 5000,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "Kotlin",
+      "description": "Formation Kotlin 10 jours",
+      "price": 8500,
+      "quantity": 1
+    },
+    {
+      "name": "angular",
+      "price": "500",
+      "description": "pour les génies",
+      "id": 6
+    },
+    {
+      "name": "test",
+      "description": "ok",
+      "price": 600,
+      "quantity": 1,
+      "id": 7
+    },
+    {
+      "name": "test",
+      "description": "test2",
+      "price": 600,
+      "id": 8
+    },
+    {
+      "name": "test3",
+      "description": "ok",
+      "price": 200,
+      "quantity": 1,
+      "id": 9
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Training } from 'src/app/model/training.model';
 import { Router } from '@angular/router';
+import { ModalOrderComponent } from 'src/app/compents/order/modal-order/modal-order.component';
 
 @Component({
   selector: 'app-cart',
@@ -33,5 +34,7 @@ export class CartComponent implements OnInit {
   placeOrder(): void {
     this.router.navigateByUrl('customer');
   }
+
+  
 
 }

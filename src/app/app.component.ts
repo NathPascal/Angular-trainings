@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthentificationService } from './services/authentification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'trainings-front-app';
+  constructor(public authentificationService: AuthentificationService) {}
+
+ 
 }
