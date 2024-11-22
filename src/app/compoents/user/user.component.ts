@@ -30,5 +30,10 @@ export class UserComponent implements OnInit {
 
   }
 
+  onLogout(){
+    this.authentificationService.logout();
+    this.router.navigateByUrl('/trainings');
+  }
+
 
 }

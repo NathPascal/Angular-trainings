@@ -15,8 +15,8 @@ export class OrderComponent implements OnInit {
   orderDate: string = new Date().toLocaleDateString();
   total: number = 0;
   showModal = false;
-  modalTitle = 'Commande confirmée';
-  modalContent = 'Votre commande a bien été prise en compte, merci de nous avoir donné : ';
+  //modalTitle = 'Commande confirmée';
+  modalContent = 'Votre commande a bien été prise en compte.';
   modalData: any;
 
   constructor(private cartService: CartService, private router : Router) { }

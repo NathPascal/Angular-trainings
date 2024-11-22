@@ -20,6 +20,7 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TrainingComponent } from './compoents/training/training.component';
 import { UserComponent } from './compoents/user/user.component';
+import { AdminComponent } from './compoents/admin/admin.component';
 
 
 
@@ -33,7 +34,8 @@ import { UserComponent } from './compoents/user/user.component';
     NotFoundComponent,
     ModalOrderComponent,
     TrainingComponent,
-    UserComponent
+    UserComponent,
+    AdminComponent
     
     
   ],

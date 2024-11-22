@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { Training } from '../model/training.model';
 
-import { CustomerComponent } from '../compoents/customer/customer.component';
-
-import { OrderComponent } from '../compents/order/order.component';
 import { Customer } from '../model/customer.model';
 
 @Injectable({

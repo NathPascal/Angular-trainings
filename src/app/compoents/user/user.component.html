@@ -3,6 +3,7 @@
         <input [(ngModel)]="email" name="email" placeholder="email" required><br><br>
         <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
         <button type="submit" class="m-3">Login</button>
+        <button type="button" (click)="onLogout()" class="red-button m-3">Déconnexion</button>
         
     </form>
 </div>

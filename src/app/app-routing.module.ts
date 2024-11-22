@@ -12,10 +12,10 @@ import { UserGuard } from './compoents/user.guard';
 
 const routes: Routes = [
 { path: 'trainings', component : TrainingsComponent}, 
-{ path: 'cart', component: CartComponent,
-  canActivate : [UserGuard]},
+{ path: 'cart', component: CartComponent,},
 { path: 'order', component: OrderComponent},
-{ path: 'customer', component: CustomerComponent},
+{ path: 'customer', component: CustomerComponent,
+  canActivate : [UserGuard]},
 { path: 'user', component: UserComponent},
 { path: 'training', component : TrainingComponent},
 { path: '', redirectTo: 'trainings', pathMatch: 'full'},
